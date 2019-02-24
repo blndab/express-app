@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema(schema, {
 })
 
 // Hash passwords before saving to database
-userSchema.pre('save', async function (next) {
+userSchema.pre('save', async function(next) {
   if (this.isModified('password')) {
     const salt = await bcrypt.genSalt(10)
     this.password = await bcrypt.hash(this.password, salt)
@@ -46,7 +46,7 @@ userSchema.pre('save', async function (next) {
 })
 
 // Choose user data to send back to client
-userSchema.methods.toJSON = function () {
+userSchema.methods.toJSON = function() {
   let userObject = this.toObject()
   return pick(userObject, [
     '_id',
