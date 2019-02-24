@@ -16,8 +16,10 @@
   "description": "MEN stack application",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "esm": "^3.2.6",
+    "exit-hook": "^2.0.0",
     "express": "^4.16.4",
     "lodash.merge": "^4.6.1",
     "mongoose": "^5.4.15",
