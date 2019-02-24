@@ -1,0 +1,39 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "app.js",
+  "scripts": {
+    "start": "set NODE_ENV=dev&& nodemon -r dotenv/config index",
+    "lint": "eslint --format table --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "private": true,
+  "author": "Belinda Baumgartner",
+  "description": "MEN stack application",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "esm": "^3.2.6",
+    "express": "^4.16.4",
+    "lodash.merge": "^4.6.1",
+    "mongoose": "^5.4.15",
+    "nodemon": "^1.18.10",
+    "simple-git": "^1.107.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
+  },
+  "prettier": {
+    "userTabs": true,
+    "semi": false,
+    "singleQuote": true
+  }
+}
