@@ -1,10 +1,7 @@
 import express from 'express'
+import userController from './user.controller';
 export const userRouter = express.Router()
 
-userRouter.get('/', (req, res) => {
-    res.send('User list')
-})
-
-userRouter.get('/:id', (req, res) => {
-    res.send(`User Id is: ${req.params.id}`)
-})
+userRouter.route('/')
+    .get(userController.getUsers)
+    .post(userController.createUser)
